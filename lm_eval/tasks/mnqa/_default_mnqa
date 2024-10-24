@@ -35,8 +35,5 @@ metric_list:
   - metric: bleu
     higher_is_better: true
     aggregation: !function utils.bleu_score
-  - metric: meteor
-    higher_is_better: true
-    aggregation: !function utils.meteor_score
 metadata:
   version: 0.1
