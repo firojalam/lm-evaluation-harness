@@ -1,0 +1,9 @@
+dataset_name: turkish_tr
+training_split: train
+validation_split: dev
+fewshot_split: train
+fewshot_config:
+  sampler: default
+include: _default_mnqa
+task: mnqa_turkish_tr
+test_split: test

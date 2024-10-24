@@ -1,0 +1,9 @@
+dataset_name: arabic_qa
+training_split: train
+validation_split: dev
+fewshot_split: train
+fewshot_config:
+  sampler: default
+include: _default_mnqa
+task: mnqa_arabic_qa
+test_split: test

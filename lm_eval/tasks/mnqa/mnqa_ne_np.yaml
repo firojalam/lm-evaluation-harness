@@ -1,0 +1,8 @@
+dataset_name: nepali_np
+fewshot_split: test
+fewshot_config:
+  sampler: default
+should_decontaminate: true
+include: _default_mnqa
+task: mnqa_nepali_np
+test_split: test

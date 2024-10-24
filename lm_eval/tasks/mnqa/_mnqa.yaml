@@ -1,0 +1,20 @@
+group: mnqa
+task:
+  - mnqa_arabic_qa
+  - mnqa_assamese_in
+  - mnqa_mnqa_bangla_bd
+  - mnqa_bangla_in
+  - mnqa_english_bd
+  - mnqa_english_qa
+  - mnqa_hindi_in
+  - mnqa_nepali_np
+  - mnqa_turkish_tr
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+  - metric: na
+metadata:
+  version: 0.1

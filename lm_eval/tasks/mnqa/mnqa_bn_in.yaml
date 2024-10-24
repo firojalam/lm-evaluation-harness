@@ -1,0 +1,9 @@
+dataset_name: bangla_in
+training_split: train
+validation_split: dev
+fewshot_split: train
+fewshot_config:
+  sampler: default
+include: _default_mnqa
+task: mnqa_bangla_in
+test_split: test

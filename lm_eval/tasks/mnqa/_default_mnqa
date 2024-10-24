@@ -1,0 +1,42 @@
+task:
+  - mnqa_arabic_qa
+  - mnqa_assamese_in
+  - mnqa_mnqa_bangla_bd
+  - mnqa_bangla_in
+  - mnqa_english_bd
+  - mnqa_english_qa
+  - mnqa_hindi_in
+  - mnqa_nepali_np
+  - mnqa_turkish_tr
+dataset_path: QCRI/MultiNativQA
+output_type: generate_until
+description: "Answer these questions:\n\n"
+doc_to_text: "Q: {{question}}?\nA:"
+doc_to_target: "{{answer}}"
+fewshot_delimiter: "\n"
+generation_kwargs:
+  until:
+    - "\n"
+  max_gen_toks: 100
+  do_sample: false
+  temperature: 0.0
+filter_list:
+  - name: remove_whitespace
+    filter:
+      - function: remove_whitespace
+      - function: take_first
+target_delimiter: " "
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+  - metric: bleu
+    higher_is_better: true
+    aggregation: !function utils.bleu_score
+  - metric: meteor
+    higher_is_better: true
+    aggregation: !function utils.meteor_score
+metadata:
+  version: 0.1
