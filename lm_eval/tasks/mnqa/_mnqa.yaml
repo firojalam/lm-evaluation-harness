@@ -2,7 +2,7 @@ group: mnqa
 task:
   - mnqa_arabic_qa
   - mnqa_assamese_in
-  - mnqa_mnqa_bangla_bd
+  - mnqa_bangla_bd
   - mnqa_bangla_in
   - mnqa_english_bd
   - mnqa_english_qa
