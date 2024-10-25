@@ -9,7 +9,8 @@ Natural Question Answering (QA) datasets play a crucial role in evaluating the c
 
 
 
-Homepage: https://nativqa.gitlab.io/
+- Homepage: https://nativqa.gitlab.io/
+- Dataset on HuggingFace: https://huggingface.co/datasets/QCRI/MultiNativQA
 
 
 ### Citation
